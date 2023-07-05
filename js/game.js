@@ -10,28 +10,48 @@ const moles = document.getElementsByClassName("mole")
 const timerDisplay = document.getElementById("timer")
 const scoreDisplay = document.getElementById("score")
 const elemento = document.getElementById("game-container")
-const gameContainer = document.getElementById("game-area")
 
 //Insertar el tiempo restante de forma dinámica en HTML
 const timerValueElement = document.getElementById('timer-value')
 timerValueElement.textContent = timer;
 
-//Función para agregar la cantidad de div deseada
-const numberOfDiv = 15; // Cambia este valor según la cantidad de repeticiones deseadas
-for (let i = 0; i < numberOfDiv; i++) {
-    const outerDiv = document.createElement('div');
-    const innerDiv = document.createElement('div');
+//Función para elegir nivel
+function levelSelect() {
+    const nivelSelect = document.getElementById('level-select')
+    const submitBtn = document.getElementById('btn-level')
+    const gameContainer = document.getElementById("game-area")
 
-    // Establece las clases, estilos u otros atributos según sea necesario
-    outerDiv.className = 'hole';
-    innerDiv.className = 'mole';
+    submitBtn.addEventListener('click', function() {
+    gameContainer.innerHTML = '' // Limpiar el contenido anterior
 
-    // Agrega el div interior al div exterior
-    outerDiv.appendChild(innerDiv);
+    const nivelSeleccionado = nivelSelect.value
+    let numberOfDiv
 
-    // Agrega el div exterior al contenedor principal
-    gameContainer.appendChild(outerDiv);
-}
+    if (nivelSeleccionado === 'facil') {
+        numberOfDiv = 5;
+    } else if (nivelSeleccionado === 'intermedio') {
+        numberOfDiv = 10;
+    } else if (nivelSeleccionado === 'dificil') {
+        numberOfDiv = 15;
+    }
+
+    for (let i = 0; i < numberOfDiv; i++) {
+        const outerDiv = document.createElement('div');
+        const innerDiv = document.createElement('div');
+    
+        // Establece las clases, estilos u otros atributos según sea necesario
+        outerDiv.className = 'hole';
+        innerDiv.className = 'mole';
+    
+        // Agrega el div interior al div exterior
+        outerDiv.appendChild(innerDiv);
+    
+        // Agrega el div exterior al contenedor principal
+        gameContainer.appendChild(outerDiv);
+    }
+    }
+)}
+levelSelect();
 //Evento click para cambiar imagen del puntero
 elemento.addEventListener('mousedown', function() {
     elemento.style.cursor = 'url(../img/mazo_click.png), auto';
