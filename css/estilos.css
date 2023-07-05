@@ -1,0 +1,30 @@
+.hole {
+    width: 80px;
+    height: 80px;
+    background-color: #9c4e0c;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+}
+
+.mole {
+    width: 60px;
+    height: 60px;
+    background-color: #f6c93a;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+#timer {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#score {
+    font-size: 24px;
+}
