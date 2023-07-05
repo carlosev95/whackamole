@@ -7,11 +7,18 @@
     <title>Whack-A-Mole</title>
 </head>
 <body>
-    <h1>Pegarle al Topo</h1>
-    <button id="startButton">Iniciar</button>
-    <div id="gameArea">
-        <div class="hole">
-            <div class="mole"></div>
+    <section id="game-container">
+        <h1>Pégale al Topo 🔨</h1>
+        <button id="startButton">Iniciar</button>
+        <div id="gameArea">
+            <div class="hole">
+                <div class="mole"></div>
+            </div>
+            <div class="hole">
+                <div class="mole"></div>
+            </div>
+            <div class="hole">
+                <div class="mole"></div>
         </div>
         <div class="hole">
             <div class="mole"></div>
@@ -22,16 +29,11 @@
         <div class="hole">
             <div class="mole"></div>
         </div>
-        <div class="hole">
-            <div class="mole"></div>
         </div>
-        <div class="hole">
-            <div class="mole"></div>
-        </div>
-    </div>
-    <div id="timer">Tiempo restante: 10</div>
-    <div id="score">Topos golpeados: 0</div>
-    <div id="mensaje-final"></div>
+        <div id="timer">Tiempo restante: 10</div>
+        <div id="score">Topos golpeados: 0</div>
+        <div id="final-message"></div>
+    </section>
 
     <script src="js/game.js"></script>
 </body>
