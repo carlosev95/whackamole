@@ -7,51 +7,15 @@
     <title>Whack-A-Mole</title>
 </head>
 <body>
-    <section id="game-container">
+    <section id="game-container" class="pointer-image">
         <div id="cabecera">
             <span id="tagline">Wack-A-Mole!</span>
         </div>
         <h2>Pégale a los topos que puedas antes de tiempo</h2>
         <button id="startButton">Iniciar</button>
-        <div id="gameArea">
-            <div class="hole">
-                <div class="mole"></div>
-            </div>
-            <div class="hole">
-                <div class="mole"></div>
-            </div>
-            <div class="hole">
-                <div class="mole"></div>
-            </div>
-            <div class="hole">
-                <div class="mole"></div>
-            </div>
-            <div class="hole">
-                <div class="mole"></div>
-            </div>
-            <div class="hole">
-                <div class="mole"></div>
-            </div>
-            <div class="hole">
-                <div class="mole"></div>
-            </div>
-            <div class="hole">
-                <div class="mole"></div>
-            </div>
-            <div class="hole">
-                <div class="mole"></div>
-            </div>
-            <div class="hole">
-                <div class="mole"></div>
-            </div>
-            <div class="hole">
-                <div class="mole"></div>
-            </div>
-            <div class="hole">
-                <div class="mole"></div>
-            </div>
+        <div id="game-area">
         </div>
-        <div id="timer">Tiempo restante: 10</div>
+        <div id="timer">Tiempo restante: <span id="timer-value"></span></div>
         <div id="score">Topos golpeados: 0</div>
         <div id="final-message"></div>
     </section>

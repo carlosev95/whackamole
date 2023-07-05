@@ -10,7 +10,28 @@ const moles = document.getElementsByClassName("mole")
 const timerDisplay = document.getElementById("timer")
 const scoreDisplay = document.getElementById("score")
 const elemento = document.getElementById("game-container")
+const gameContainer = document.getElementById("game-area")
 
+//Insertar el tiempo restante de forma dinámica en HTML
+const timerValueElement = document.getElementById('timer-value')
+timerValueElement.textContent = timer;
+
+//Función para agregar la cantidad de div deseada
+const numberOfDiv = 15; // Cambia este valor según la cantidad de repeticiones deseadas
+for (let i = 0; i < numberOfDiv; i++) {
+    const outerDiv = document.createElement('div');
+    const innerDiv = document.createElement('div');
+
+    // Establece las clases, estilos u otros atributos según sea necesario
+    outerDiv.className = 'hole';
+    innerDiv.className = 'mole';
+
+    // Agrega el div interior al div exterior
+    outerDiv.appendChild(innerDiv);
+
+    // Agrega el div exterior al contenedor principal
+    gameContainer.appendChild(outerDiv);
+}
 //Evento click para cambiar imagen del puntero
 elemento.addEventListener('mousedown', function() {
     elemento.style.cursor = 'url(../img/mazo_click.png), auto';
