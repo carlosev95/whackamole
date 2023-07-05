@@ -22,10 +22,16 @@ body {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     padding: 0.8em 2em;
     text-align: center;
     margin: 0;
+}
+
+h2 {
+    font-size: 2em;
+    padding: 0 3em;
+    margin-bottom: 0;
 }
 
 button {
@@ -54,6 +60,24 @@ button {
     align-items: center;
     background: #D5D977;
 }
+
+#cabecera {
+    background: #A6450D;
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.5);
+    color: white;
+    margin: 0;
+    padding: 0.5em 0;
+    text-align: center;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+#cabecera #tagline {
+    font-weight: normal;
+    font-size: 1.4em;
+    text-align: center;
+}
+
 #timer {
     font-size: 24px;
     margin-bottom: 10px;
@@ -78,13 +102,15 @@ button {
 }
 
 .mole {
-    width: 60px;
-    height: 60px;
-    background-color: #D5E5F2;
-    border-radius: 50%;
-    position: absolute;
+    width: 74%;
+    height: 58%;
+    background-image: url(/img/topo.png);
+    background-size: cover;
+    border-radius: 0;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
+    padding: 2px;
 }
