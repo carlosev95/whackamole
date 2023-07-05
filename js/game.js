@@ -1,7 +1,8 @@
         // Variables del juego
-        let timer = 20;
+        let timer = 10;
         let score = 0;
         let intervalId;
+        let mensajeFinal = document.getElementById("mensaje-final")
         
         // Obtener elementos del DOM
         const startButton = document.getElementById("startButton");
@@ -14,7 +15,7 @@
         function startGame() {
             startButton.disabled = true;
             score = 0;
-            timer = 20;
+            timer = 10;
             timerDisplay.textContent = `Tiempo restante: ${timer}`;
             scoreDisplay.textContent = `Topos golpeados: ${score}`;
             
@@ -64,7 +65,7 @@
             clearInterval(intervalId);
             hideAllMoles();
             startButton.disabled = false;
-            alert(`¡Fin del juego! Tu puntuación final es: ${score}`);
+            mensajeFinal.innerText = "¡Fin del juego! Tu puntuación final es: "+ score
         }
         
         // Evento de clic para iniciar el juego
