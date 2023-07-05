@@ -18,6 +18,7 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
+    cursor: url(../img/mazo.png), auto;
 }
 
 h1 {
@@ -53,6 +54,19 @@ button {
     align-items: center;
     background: #D5D977;
 }
+#timer {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#score {
+    font-size: 24px;
+}
+
+#final-message {
+    padding: 1em 0 1em 0;
+    font-size: 1.8em;
+}
 .hole {
     width: 80px;
     height: 80px;
@@ -73,18 +87,4 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
-}
-
-#timer {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-#score {
-    font-size: 24px;
-}
-
-#final-message {
-    padding: 1em 0 1em 0;
-    font-size: 1.8em;
 }
