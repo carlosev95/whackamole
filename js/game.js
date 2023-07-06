@@ -1,6 +1,6 @@
 // Variables del juego
-let timer = 10
-let score = 0
+let timer
+let score
 let intervalId
 let finalMessage = document.getElementById("final-message")
 
@@ -52,7 +52,42 @@ function levelSelect() {
     }
 )}
 levelSelect();
+
+// Función para cambiar el estilo del puntero y llevar la cuenta de clicks
+function changePointer() {
+    const cajaInterior = document.getElementById('mole');
+    const contador = document.getElementById('contador');
+  
+    let isClicking = false;
+    let pointerImage = 'imagen1.png';
+  
+    cajaInterior.addEventListener('mousedown', function() {
+      isClicking = true;
+      pointerImage = 'imagen2.png';
+      cajaInterior.style.backgroundImage = `url(${pointerImage})`;
+    });
+  
+    cajaInterior.addEventListener('mouseup', function() {
+      isClicking = false;
+      pointerImage = 'imagen1.png';
+      cajaInterior.style.backgroundImage = `url(${pointerImage})`;
+    });
+  
+    cajaInterior.addEventListener('mouseleave', function() {
+      if (isClicking) {
+        isClicking = false;
+        pointerImage = 'imagen1.png';
+        cajaInterior.style.backgroundImage = `url(${pointerImage})`;
+      }
+    });
+  
+    cajaInterior.addEventListener('click', function() {
+      contador.textContent = `Contador: ${parseInt(contador.textContent.split(': ')[1]) + 1}`;
+    });
+}
+
 //Evento click para cambiar imagen del puntero
+/*
 elemento.addEventListener('mousedown', function() {
     elemento.style.cursor = 'url(../img/mazo_click.png), auto';
 })
@@ -60,6 +95,7 @@ elemento.addEventListener('mousedown', function() {
 elemento.addEventListener('mouseup', function() {
     elemento.style.cursor = 'url(../img/mazo.png), auto';
 })
+*/
 
 // Función para iniciar el juego
 function startGame() {

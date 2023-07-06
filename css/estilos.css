@@ -18,7 +18,7 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    cursor: url(../img/mazo.png), auto;
+    /*cursor: url(../img/mazo.png), auto;*/
 }
 
 h1 {
@@ -46,6 +46,31 @@ button {
     margin-bottom: 1em;
     cursor: pointer;
 }
+
+select {
+    padding: 8px;
+    font-size: 1.2em;
+    border-radius: 4px;
+    background-color: #465902;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 1em;
+}
+  
+select:hover {
+    border-color: #666;
+}
+  
+select:focus {
+    outline: none;
+    box-shadow: 0 0 3px #666;
+}
+  
+select option {
+    padding: 8px;
+}
+  
 
 #game-container {
     width: 50%;
