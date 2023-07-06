@@ -9,7 +9,7 @@ const startButton = document.getElementById("startButton")
 const moles = document.getElementsByClassName("mole")
 const timerDisplay = document.getElementById("timer")
 const scoreDisplay = document.getElementById("score")
-const elemento = document.getElementById("game-container")
+const body = document.querySelector('body')
 
 //Insertar el tiempo restante de forma dinámica en HTML
 const timerValueElement = document.getElementById('timer-value')
@@ -56,46 +56,50 @@ levelSelect();
 // Función para cambiar el estilo del puntero y llevar la cuenta de clicks
 function changePointer() {
     const cajaInterior = document.getElementById('mole');
-    const contador = document.getElementById('contador');
   
     let isClicking = false;
-    let pointerImage = 'imagen1.png';
+    let pointerImage = 'img/mazo_click.png';
   
     cajaInterior.addEventListener('mousedown', function() {
       isClicking = true;
-      pointerImage = 'imagen2.png';
+      pointerImage = 'img/mazo_click.png';
       cajaInterior.style.backgroundImage = `url(${pointerImage})`;
     });
   
     cajaInterior.addEventListener('mouseup', function() {
       isClicking = false;
-      pointerImage = 'imagen1.png';
+      pointerImage = 'img/mazo.png';
       cajaInterior.style.backgroundImage = `url(${pointerImage})`;
     });
   
     cajaInterior.addEventListener('mouseleave', function() {
       if (isClicking) {
         isClicking = false;
-        pointerImage = 'imagen1.png';
+        pointerImage = 'img/mazo.png';
         cajaInterior.style.backgroundImage = `url(${pointerImage})`;
       }
     });
+}
+
+//Cambiar imagen del puntero
+body.addEventListener('mousedown', function() {
+    body.style.cursor = 'url(../img/mazo_click.png), auto';
+})
+
+body.addEventListener('mouseup', function() {
+    body.style.cursor = 'url(../img/mazo.png), auto';
+})
+
+// Evento click a la imagen del topo
+function configurarCaja() {
+    const cajaInterior = document.getElementById('mole');
+    const contador = document.getElementById('contador');
   
     cajaInterior.addEventListener('click', function() {
       contador.textContent = `Contador: ${parseInt(contador.textContent.split(': ')[1]) + 1}`;
     });
 }
-
-//Evento click para cambiar imagen del puntero
-/*
-elemento.addEventListener('mousedown', function() {
-    elemento.style.cursor = 'url(../img/mazo_click.png), auto';
-})
-
-elemento.addEventListener('mouseup', function() {
-    elemento.style.cursor = 'url(../img/mazo.png), auto';
-})
-*/
+configurarCaja();
 
 // Función para iniciar el juego
 function startGame() {
@@ -128,14 +132,14 @@ function showRandomMole() {
     randomMole.style.display = "block"
     
     // Evento de clic para golpear al topo
-    randomMole.addEventListener('mousedown', hitMole)
+    randomMole.addEventListener('click', hitMole)
 }
 
 // Función para ocultar todos los topos
 function hideAllMoles() {
     for (let mole of moles) {
         mole.style.display = "none"
-        mole.removeEventListener('mousedown', hitMole)
+        mole.removeEventListener('click', hitMole)
     }
 }
 
