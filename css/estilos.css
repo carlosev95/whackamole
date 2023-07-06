@@ -18,20 +18,20 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-
+    /*cursor: url(../img/mazo.png), auto;*/
 }
 
 h1 {
-    font-size: 2.5em;
-    padding: 0.8em 2em;
+    font-size: 2em;
+    padding: 0 2em 0.8em 2em;
     text-align: center;
     margin: 0;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     padding: 0 3em;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 button {
@@ -55,7 +55,6 @@ select {
     color: white;
     cursor: pointer;
     text-align: center;
-    margin-bottom: 1em;
 }
   
 select:hover {
@@ -73,8 +72,8 @@ select option {
   
 
 #game-container {
-    width: 50%;
-    height: 80vh;
+    width: 60%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -117,8 +116,8 @@ select option {
     font-size: 1.8em;
 }
 .hole {
-    width: 80px;
-    height: 80px;
+    width: 6em;
+    height: 6em;
     background-color: #778C2A;
     border-radius: 50%;
     display: inline-block;
@@ -130,6 +129,7 @@ select option {
     width: 74%;
     height: 58%;
     background-image: url(/img/topo.png);
+    background-repeat: no-repeat;
     background-size: cover;
     border-radius: 0;
     position: relative;

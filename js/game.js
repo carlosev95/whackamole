@@ -53,34 +53,6 @@ function levelSelect() {
 )}
 levelSelect();
 
-// Función para cambiar el estilo del puntero y llevar la cuenta de clicks
-function changePointer() {
-    const cajaInterior = document.getElementById('mole');
-  
-    let isClicking = false;
-    let pointerImage = 'img/mazo_click.png';
-  
-    cajaInterior.addEventListener('mousedown', function() {
-      isClicking = true;
-      pointerImage = 'img/mazo_click.png';
-      cajaInterior.style.backgroundImage = `url(${pointerImage})`;
-    });
-  
-    cajaInterior.addEventListener('mouseup', function() {
-      isClicking = false;
-      pointerImage = 'img/mazo.png';
-      cajaInterior.style.backgroundImage = `url(${pointerImage})`;
-    });
-  
-    cajaInterior.addEventListener('mouseleave', function() {
-      if (isClicking) {
-        isClicking = false;
-        pointerImage = 'img/mazo.png';
-        cajaInterior.style.backgroundImage = `url(${pointerImage})`;
-      }
-    });
-}
-
 //Cambiar imagen del puntero
 body.addEventListener('mousedown', function() {
     body.style.cursor = 'url(../img/mazo_click.png), auto';
@@ -90,22 +62,12 @@ body.addEventListener('mouseup', function() {
     body.style.cursor = 'url(../img/mazo.png), auto';
 })
 
-// Evento click a la imagen del topo
-function configurarCaja() {
-    const cajaInterior = document.getElementById('mole');
-    const contador = document.getElementById('contador');
-  
-    cajaInterior.addEventListener('click', function() {
-      contador.textContent = `Contador: ${parseInt(contador.textContent.split(': ')[1]) + 1}`;
-    });
-}
-configurarCaja();
 
 // Función para iniciar el juego
 function startGame() {
     startButton.disabled = true
     score = 0
-    timer = 10
+    timer = 15
     timerDisplay.textContent = `Tiempo restante: ${timer}`
     scoreDisplay.textContent = `Topos golpeados: ${score}`
     
