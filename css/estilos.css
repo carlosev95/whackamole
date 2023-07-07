@@ -80,7 +80,7 @@ select:focus {
 }
   
 select option {
-    padding: 0.5em 1em;
+    padding: 8px;
 }
 
 #game-container {

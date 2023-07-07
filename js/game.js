@@ -12,6 +12,7 @@ const scoreDisplay = document.getElementById("score")
 const body = document.querySelector('body')
 const btnReload = document.getElementById("button-reload")
 const hideSelector = document.getElementById("start-game")
+const hideLevel = document.getElementById("level")
 
 //Insertar el tiempo restante de forma dinámica en HTML
 const timerValueElement = document.getElementById('timer-value')
@@ -40,12 +41,15 @@ function levelSelect() {
     if (nivelSeleccionado === 'facil') {
         numberOfDiv = 5;
         startButton.style.display = 'block'
+        hideLevel.style.display = 'none'
     } else if (nivelSeleccionado === 'intermedio') {
         numberOfDiv = 10;
         startButton.style.display = 'block'
+        hideLevel.style.display = 'none'
     } else if (nivelSeleccionado === 'dificil') {
         numberOfDiv = 15;
         startButton.style.display = 'block'
+        hideLevel.style.display = 'none'
     }
 
     for (let i = 0; i < numberOfDiv; i++) {
