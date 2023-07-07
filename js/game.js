@@ -12,7 +12,6 @@ const scoreDisplay = document.getElementById("score")
 const body = document.querySelector('body')
 const btnReload = document.getElementById("button-reload")
 const hideSelector = document.getElementById("start-game")
-const hideLevel = document.getElementById("level")
 
 //Insertar el tiempo restante de forma dinámica en HTML
 const timerValueElement = document.getElementById('timer-value')
@@ -32,7 +31,7 @@ function levelSelect() {
     const nivelSelect = document.getElementById('level-select')
     const submitBtn = document.getElementById('btn-level')
     const gameContainer = document.getElementById("game-area")
-
+    const hideLevel = document.getElementById("level")
     submitBtn.addEventListener('click', function() {
     gameContainer.innerHTML = '' // Limpiar el contenido anterior
     const nivelSeleccionado = nivelSelect.value

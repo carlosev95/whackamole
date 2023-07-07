@@ -68,6 +68,7 @@ select {
     cursor: pointer;
     text-align: center;
     margin: 1em 0;
+    text-align-last: center;
 }
   
 select:hover {
