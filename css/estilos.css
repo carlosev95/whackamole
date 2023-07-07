@@ -78,11 +78,9 @@ select option {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: auto;
     padding: 0;
-    margin: 0 auto;
     text-align: center;
-    align-items: center;
+    margin: 0 auto;
     background: #D5D977;
 }
 
@@ -154,12 +152,9 @@ select option {
 #footer {
     background: #A6450D;
     color: white;
-    margin: 0;
-    padding: 0.5em 0;
     text-align: center;
-    width: 100%;
+    padding: 0.5em;
     font-size: 1.2em;
-    box-shadow: 0px -5px 10px -5px rgba(0, 0, 0, 0.5);
 }
 
 #img-footer {
