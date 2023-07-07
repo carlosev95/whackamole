@@ -5,15 +5,26 @@ let intervalId
 let finalMessage = document.getElementById("final-message")
 
 // Obtener elementos del DOM
-const startButton = document.getElementById("startButton")
+const startButton = document.getElementById("start-btn")
 const moles = document.getElementsByClassName("mole")
 const timerDisplay = document.getElementById("timer")
 const scoreDisplay = document.getElementById("score")
 const body = document.querySelector('body')
+const btnReload = document.getElementById("button-reload")
+const hideSelector = document.getElementById("start-game")
 
 //Insertar el tiempo restante de forma dinámica en HTML
 const timerValueElement = document.getElementById('timer-value')
 timerValueElement.textContent = timer;
+
+//Cambiar imagen del puntero
+body.addEventListener('mousedown', function() {
+    body.style.cursor = 'url(img/mazo_click.png), auto';
+})
+
+body.addEventListener('mouseup', function() {
+    body.style.cursor = 'url(img/mazo.png), auto';
+})
 
 //Función para elegir nivel
 function levelSelect() {
@@ -23,16 +34,18 @@ function levelSelect() {
 
     submitBtn.addEventListener('click', function() {
     gameContainer.innerHTML = '' // Limpiar el contenido anterior
-
     const nivelSeleccionado = nivelSelect.value
     let numberOfDiv
 
     if (nivelSeleccionado === 'facil') {
         numberOfDiv = 5;
+        startButton.style.display = 'block'
     } else if (nivelSeleccionado === 'intermedio') {
         numberOfDiv = 10;
+        startButton.style.display = 'block'
     } else if (nivelSeleccionado === 'dificil') {
         numberOfDiv = 15;
+        startButton.style.display = 'block'
     }
 
     for (let i = 0; i < numberOfDiv; i++) {
@@ -53,16 +66,6 @@ function levelSelect() {
 )}
 levelSelect();
 
-//Cambiar imagen del puntero
-body.addEventListener('mousedown', function() {
-    body.style.cursor = 'url(img/mazo_click.png), auto';
-})
-
-body.addEventListener('mouseup', function() {
-    body.style.cursor = 'url(img/mazo.png), auto';
-})
-
-
 // Función para iniciar el juego
 function startGame() {
     startButton.disabled = true
@@ -70,6 +73,7 @@ function startGame() {
     timer = 15
     timerDisplay.textContent = `Tiempo restante: ${timer}`
     scoreDisplay.textContent = `Topos golpeados: ${score}`
+    hideSelector.style.display = "none"
     
     showRandomMole()
     
@@ -118,6 +122,14 @@ function endGame() {
     hideAllMoles()
     startButton.disabled = false
     finalMessage.innerText = "¡Fin del juego! Tu puntuación final es: "+ score
+    btnReload.style.display = 'block'
+}
+
+function showButtonReload() {
+}
+
+function reloadGame() {
+    location.reload()
 }
 
 // Evento de clic para iniciar el juego

@@ -1,31 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
     <title>Whack-A-Mole</title>
 </head>
+
 <body>
-    <section id="game-container" class="pointer-image">
+    <section id="game-container">
         <div id="cabecera">
             <span id="tagline">Wack-A-Mole!</span>
         </div>
-        <h1>Pégale a todos los topos que puedas antes de tiempo</h1>
-        <h2>¿Qué nivel quieres jugar?</h2>
-        <select id="level-select">
-            <option value="facil">Fácil</option>
-            <option value="intermedio">Intermedio</option>
-            <option value="dificil">Difícil</option>
-          </select>
-          <button id="btn-level">Submit</button>
-        <button id="startButton">Iniciar</button>
-        <div id="game-area"></div>
-        <div id="timer">Tiempo restante: <span id="timer-value"></span></div>
-        <div id="score">Topos golpeados: </div>
-        <div id="final-message"></div>
+        <div id="post">
+            <h1>Pégale a todos los topos que puedas antes de tiempo</h1>
+            <section id="start-game">
+                <h2>¿Qué nivel quieres jugar?</h2>
+                <div id="level">
+                    <select id="level-select">
+                        <option value="facil">Fácil</option>
+                        <option value="intermedio">Intermedio</option>
+                        <option value="dificil">Difícil</option>
+                    </select>
+                    <button id="btn-level">Elegir Nivel</button>
+                </div>
+                <button id="start-btn" style="display: none;">Iniciar</button>
+            </section>
+
+            <div id="game-area"></div>
+            <div id="timer"><span id="timer-value"></span></div>
+            <div id="score"></div>
+            <div id="final-message"></div>
+            <div id="button-reload" style="display: none;">
+                <button id="reboot" onclick="reloadGame()">Reiniciar</button>
+            </div>
+        </div>
+        <div id="footer">
+            Proyecto creado por Carlos E (2023)
+            <a href="https://github.com/mccromo/logical_thinking" target="_blank"><img id="img-footer"
+                    src="../img/github.png"></a>
+            <a href="https://www.linkedin.com/in/carlosev23/" target="_blank"><img id="img-footer"
+                    src="../img/linkedin.png"></a>
+        </div>
     </section>
 
     <script src="js/game.js"></script>
 </body>
+
 </html>

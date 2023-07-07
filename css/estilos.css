@@ -17,15 +17,14 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    /*cursor: url(../img/mazo.png), auto;*/
+    flex-direction: column;
 }
 
-h1 {
+h1 {    
     font-size: 2em;
     padding: 0 2em 0.8em 2em;
     text-align: center;
-    margin: 0;
+    margin: 0.5em 1em 1em 1em;
 }
 
 h2 {
@@ -47,14 +46,28 @@ button {
     cursor: pointer;
 }
 
+#btn-level {
+    width: 6.5em;
+    height: 3em;
+    border-radius: 0.7em;
+    background: #A6450D;
+    border: 0.1em solid transparent;
+    color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    cursor: pointer;
+}
+
 select {
-    padding: 8px;
+    padding: 0.5em 1em;
     font-size: 1.2em;
     border-radius: 4px;
     background-color: #465902;
     color: white;
     cursor: pointer;
     text-align: center;
+    margin: 1em 0;
 }
   
 select:hover {
@@ -67,19 +80,17 @@ select:focus {
 }
   
 select option {
-    padding: 8px;
+    padding: 0.5em 1em;
 }
-  
 
 #game-container {
-    width: 60%;
-    height: 100vh;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: auto;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     text-align: center;
     align-items: center;
     background: #D5D977;
@@ -97,9 +108,30 @@ select option {
 }
 
 #cabecera #tagline {
-    font-weight: normal;
-    font-size: 1.4em;
+    font-size: 2em;
+    font-weight: bold;
+    color: #D5E5F2;
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding-bottom: 10px;
+}
+
+#post #level {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7em 0;
+}
+
+#start-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
 }
 
 #timer {
@@ -115,6 +147,25 @@ select option {
     padding: 1em 0 1em 0;
     font-size: 1.8em;
 }
+
+#footer {
+    background: #A6450D;
+    color: white;
+    margin: 0;
+    padding: 0.5em 0;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2em;
+    box-shadow: 0px -5px 10px -5px rgba(0, 0, 0, 0.5);
+}
+
+#img-footer {
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    margin: 0 0 0 0.4em;
+}
+
 .hole {
     width: 6em;
     height: 6em;
