@@ -3,7 +3,7 @@
 
 *Un clásico que todos alguna vez hemos jugado.*
 
-Elige tu nivel de dificultad y trata de darle a todos los topos antes de que se termine el tiempo.
+Elige el nivel de dificultad y trata de darle a todos los topos antes de que se termine el tiempo.
 
 **¡Diviértete!**
 
