@@ -31,6 +31,7 @@ h2 {
     font-size: 1.8em;
     padding: 0 3em;
     margin: 0;
+    color: #A6450D;
 }
 
 button {
@@ -42,19 +43,6 @@ button {
     color: #f5f5f5;
     font-family: 'Poppins', sans-serif;
     font-size: 1.7em;
-    margin-bottom: 1em;
-    cursor: pointer;
-}
-
-#btn-level {
-    width: 6.5em;
-    height: 3em;
-    border-radius: 0.7em;
-    background: #A6450D;
-    border: 0.1em solid transparent;
-    color: #f5f5f5;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5em;
     margin-bottom: 1em;
     cursor: pointer;
 }
@@ -86,6 +74,7 @@ select option {
 
 #game-container {
     width: 50%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -108,10 +97,10 @@ select option {
     font-size: 1.5em;
 }
 
-#cabecera #tagline {
+#tagline {
     font-size: 2em;
     font-weight: bold;
-    color: #D5E5F2;
+    color: white;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -135,17 +124,30 @@ select option {
     margin-top: 0;
 }
 
+#btn-level {
+    width: 6.5em;
+    height: 3em;
+    border-radius: 0.7em;
+    background: #A6450D;
+    border: 0.1em solid transparent;
+    color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    cursor: pointer;
+}
+
 #timer {
-    font-size: 24px;
+    font-size: 1.6em;
     margin-bottom: 10px;
 }
 
 #score {
-    font-size: 24px;
+    font-size: 1.6em;
 }
 
 #final-message {
-    padding: 1em 0 1em 0;
+    padding: 1em 0.4em;
     font-size: 1.8em;
 }
 
@@ -181,7 +183,6 @@ select option {
     width: 74%;
     height: 58%;
     background-image: url(../img/topo.png);
-    /*background-repeat: no-repeat;*/
     background-size: cover;
     border-radius: 0;
     position: relative;
@@ -190,4 +191,107 @@ select option {
     transform: translate(-50%, -50%);
     display: none;
     padding: 2px;
+}
+
+@media (max-width: 1440px) {
+    #game-container {
+        width: 70%;
+    }
+}
+
+@media (max-width: 1024px) {
+    #game-container {
+        width: 90%;
+    }
+    #tagline {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        padding: 0 2em;
+    }
+    #game-container {
+        width: 100%;
+    } 
+    #post {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+    #timer {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    
+    #score {
+        font-size: 1.5em;
+    }
+    #final-message {
+        padding: 1em 0.4em;
+        font-size: 1.7em;
+    }
+    .hole {
+        width: 5em;
+        height: 5em;
+        margin: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        margin:0.5em 0 0.5em 0;
+        font-size: 1.7em;
+        padding: 0;
+    }
+    h2 {
+        font-size: 1.5em;
+        padding: 0 1em;
+    }
+    button {
+        width: 4.6em;
+        height: 2.3em;
+        font-size: 1.5em;
+    }
+    select {
+        padding: 0.5em 0.2em;
+    }
+    #btn-level {
+        width: 6em;
+        height: 2.8em;
+        font-size: 1.3em;
+    }
+    #tagline {
+        font-size: 1.5em;
+    }
+    .hole {
+        width: 4.5em;
+        height: 4.5em;
+        margin: 6px;
+    }
+}
+
+@media (max-width: 360px) {
+    button {
+        width: 4.5em;
+        height: 2.2em;
+        font-size: 1.3em;
+    }
+    select {
+        padding: 0.5em 0.2em;
+    }
+    #tagline {
+        font-size: 1.1em;
+    }
+    #btn-level {
+        width: 6.8em;
+        height: 2.8em;
+        font-size: 1.1em;
+    }
+    .hole {
+        width: 4em;
+        height: 4em;
+        margin: 5px;
+    }
 }
