@@ -128,8 +128,8 @@ select option {
 .mole {
     width: 74%;
     height: 58%;
-    background-image: url(/img/topo.png);
-    background-repeat: no-repeat;
+    background-image: url(../img/topo.png);
+    /*background-repeat: no-repeat;*/
     background-size: cover;
     border-radius: 0;
     position: relative;

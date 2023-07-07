@@ -55,11 +55,11 @@ levelSelect();
 
 //Cambiar imagen del puntero
 body.addEventListener('mousedown', function() {
-    body.style.cursor = 'url(../img/mazo_click.png), auto';
+    body.style.cursor = 'url(img/mazo_click.png), auto';
 })
 
 body.addEventListener('mouseup', function() {
-    body.style.cursor = 'url(../img/mazo.png), auto';
+    body.style.cursor = 'url(img/mazo.png), auto';
 })
 
 
